@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sign_up_page_2/multi.dart';
+import 'package:sign_up_page_2/screens/fill_out_inspection.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
@@ -63,7 +64,13 @@ class FirstPage extends StatelessWidget {
                             ]
                           ),
                           child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const FillInspection()),
+                                );
+                              },
                               style: ElevatedButton.styleFrom(
                                   backgroundColor:
                                       const Color.fromARGB(255, 0, 49, 92),
