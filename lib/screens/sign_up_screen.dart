@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:sign_up_page_2/multi.dart';
 import 'package:sign_up_page_2/screens/first_page.dart';
 import 'package:sign_up_page_2/screens/login_screen.dart';
 import 'package:sign_up_page_2/statemaneger/Provider.dart';
@@ -55,13 +56,7 @@ class SignUpPage extends StatelessWidget {
                                     ),
                                     color: Color.fromARGB(255, 255, 255, 255),
                                   )),
-                              const Text(
-                                'Registeration',
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255),
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w300),
-                              ),
+                               Multi(color: Colors.white, subtitle: 'Registration', weight: FontWeight.w600, size: 25)
                             ]),
                       ),
                       Container(
@@ -71,13 +66,7 @@ class SignUpPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(
-                                'User Name:',
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255),
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w300),
-                              ),
+                              Multi(color: Colors.white, subtitle: 'User Name', weight: FontWeight.w500, size: 15),
                               TextField(
                                 decoration: InputDecoration(
                                   enabledBorder: const OutlineInputBorder(
@@ -131,14 +120,14 @@ class SignUpPage extends StatelessWidget {
                                           dropdownColor: const Color.fromARGB(
                                               255, 4, 17, 65),
                                           isExpanded: true,
-
+        
                                           // Initial Value
                                           value: dropdownvalue,
-
+        
                                           // Down Arrow Icon
                                           icon: const Icon(
                                               Icons.keyboard_arrow_down),
-
+        
                                           // Array list of items
                                           items: items.map((String items) {
                                             return DropdownMenuItem(
@@ -170,13 +159,7 @@ class SignUpPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(
-                                'Password:',
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255),
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w300),
-                              ),
+                              Multi(color: Colors.white, subtitle: 'Set Password', weight: FontWeight.w500, size: 15),
                               TextField(
                                 decoration: InputDecoration(
                                   enabledBorder: const OutlineInputBorder(
@@ -247,7 +230,7 @@ class SignUpPage extends StatelessWidget {
                                       shape: RoundedRectangleBorder(
                                           //to set border radius to button
                                           borderRadius:
-                                              BorderRadius.circular(10))),
+                                              BorderRadius.circular(5))),
                                   child: const Text(
                                     'Register',
                                     style: TextStyle(

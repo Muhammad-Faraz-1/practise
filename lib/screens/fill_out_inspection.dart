@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 import 'package:sign_up_page_2/multi.dart';
 import 'package:sign_up_page_2/screens/sheet.dart';
+import 'package:sign_up_page_2/statemaneger/Provider.dart';
 
 class FillInspection extends StatelessWidget {
   const FillInspection({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final Provider11 = Provider.of<Provider1>(context);
     return SafeArea(
       child: Scaffold(
-        body: Container(
+        body: CustomScrollView(
+          slivers: [
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Container(
           height: double.infinity.h,
           width: double.infinity.w,
           child: Stack(
@@ -62,7 +69,7 @@ class FillInspection extends StatelessWidget {
                             width: 300.w,
                             decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-
+              
                               boxShadow: [
                               BoxShadow(
                       color: Color.fromARGB(255, 51, 101, 145).withOpacity(0.5),
@@ -103,7 +110,7 @@ class FillInspection extends StatelessWidget {
                             width: 300.w,
                             decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-
+              
                               boxShadow: [
                               BoxShadow(
                       color: Color.fromARGB(255, 51, 101, 145).withOpacity(0.5),
@@ -144,7 +151,7 @@ class FillInspection extends StatelessWidget {
                             width: 300.w,
                             decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-
+              
                               boxShadow: [
                               BoxShadow(
                       color: Color.fromARGB(255, 51, 101, 145).withOpacity(0.5),
@@ -198,9 +205,7 @@ class FillInspection extends StatelessWidget {
                       child: Container(
                         height: 60.h,
                         width: 100.w,
-                        child: Image.network(
-                          'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Zuganov-sign.png/800px-Zuganov-sign.png',
-                        ),
+                        child: Image.asset('assets/facebook.png')
                       ),
                     ),
                     Multi(
@@ -214,6 +219,9 @@ class FillInspection extends StatelessWidget {
             ],
           ),
         ),
+            )
+          ],
+        )
       ),
     );
   }

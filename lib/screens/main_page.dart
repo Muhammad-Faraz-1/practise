@@ -14,7 +14,13 @@ class MainPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 4, 17, 65),
-        body: Padding(
+        body: CustomScrollView(
+          slivers: [
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child:Container(
+                color: Colors.transparent,
+               child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -22,12 +28,7 @@ class MainPage extends StatelessWidget {
               Container(
                   height: 100.h,
                   width: 150.w,
-                  child: const Image(
-                    image: NetworkImage(
-                      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Zuganov-sign.png/800px-Zuganov-sign.png',
-                    ),
-                    color: Color.fromARGB(255, 255, 255, 255),
-                  )),
+                  child: Image.asset('assets/facebook.png')),
               const Text(
                 'Welcome to',
                 style: TextStyle(
@@ -62,7 +63,7 @@ class MainPage extends StatelessWidget {
                             //to set border radius to button
                             borderRadius: BorderRadius.circular(10))),
                     child: const Text(
-                      'LOGIN',
+                      'LogIn',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -92,7 +93,7 @@ class MainPage extends StatelessWidget {
                             //to set border radius to button
                             borderRadius: BorderRadius.circular(10))),
                     child: const Text(
-                      'Sign Up',
+                      'SignUp',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -104,7 +105,10 @@ class MainPage extends StatelessWidget {
               ),
             ],
           ),
-        ),
+        ),),
+            )
+          ],
+        )
       ),
     );
   }

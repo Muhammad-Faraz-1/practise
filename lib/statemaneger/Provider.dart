@@ -18,4 +18,24 @@ class Provider1 extends ChangeNotifier {
   changeValue(newValue) {
     dropdownvalue = newValue!;
   }
+
+  int? indexx;
+
+  // 0 == am
+  // 1 == pm
+
+  changeTime(int index) {
+    indexx = index;
+    notifyListeners();
+  }
+
+  bool? isAm;
+  bool? isPm;
+  time(isam, ispm) {
+    bool? isAm;
+    bool? isPm;
+    isAm = isam;
+    isPm = ispm;
+    notifyListeners();
+  }
 }
