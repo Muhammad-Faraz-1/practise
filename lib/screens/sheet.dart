@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'package:sign_up_page_2/multi.dart';
 import 'package:sign_up_page_2/screens/first_page.dart';
 import 'package:sign_up_page_2/statemaneger/Provider.dart';
+import 'package:sign_up_page_2/widgets/nested_table.dart';
+import 'package:sign_up_page_2/widgets/table.dart';
 
 class Sheet extends StatelessWidget {
   const Sheet({
@@ -320,8 +322,12 @@ class Sheet extends StatelessWidget {
                     ),
                     Container(
                       height: 250.h,
-                      width: 350.w,
-                      color: const Color.fromARGB(255, 4, 17, 65),
+                      width: double.infinity,
+                      
+                      child: Padding(
+                        padding: const EdgeInsets.all(8),
+                        child: Table1(),
+                      ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -374,7 +380,7 @@ class Sheet extends StatelessWidget {
                             child: Container(
                                 height: 60.h,
                                 width: 100.w,
-                                child: Image.asset('assets/facebook.png')),
+                                child: Image.asset('assets/logo.png')),
                           ),
                           Multi(
                               color: const Color.fromARGB(255, 0, 49, 92),

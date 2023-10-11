@@ -51,18 +51,16 @@ class splash extends StatelessWidget {
         height: double.infinity,
         width: double.infinity,
         color: const Color.fromARGB(255, 4, 17, 65),
-        child: const Padding(
-          padding: EdgeInsets.only(top: 350),
+        child:  Padding(
+          padding:const EdgeInsets.only(top: 350),
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(15),
-                child: Image(
-                    image: NetworkImage(
-                        'https://zellesolutions.com/wp-content/uploads/thegem-logos/logo_beb7c2e7ffd15d49376bd7dc41cfe8ca_1x.png')),
+                padding:const EdgeInsets.all(15),
+                child: Image.asset('assets/logo.png')  ,
               ),
-              Text('Welcome to',style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25,fontWeight: FontWeight.w400),),
-              Text('Inspection App',style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25,fontWeight: FontWeight.w400))
+              const Text('Welcome to',style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25,fontWeight: FontWeight.w400),),
+              const Text('Inspection App',style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25,fontWeight: FontWeight.w400))
             ],
           ),
         ),

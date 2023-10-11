@@ -50,13 +50,12 @@ class SignUpPage extends StatelessWidget {
                               Container(
                                   height: 60.h,
                                   width: 150.w,
-                                  child: const Image(
-                                    image: NetworkImage(
-                                      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Zuganov-sign.png/800px-Zuganov-sign.png',
-                                    ),
-                                    color: Color.fromARGB(255, 255, 255, 255),
-                                  )),
-                               Multi(color: Colors.white, subtitle: 'Registration', weight: FontWeight.w600, size: 25)
+                                  child: Image.asset('assets/logo.png')),
+                              Multi(
+                                  color: Colors.white,
+                                  subtitle: 'Registration',
+                                  weight: FontWeight.w600,
+                                  size: 25)
                             ]),
                       ),
                       Container(
@@ -66,7 +65,11 @@ class SignUpPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Multi(color: Colors.white, subtitle: 'User Name', weight: FontWeight.w500, size: 15),
+                              Multi(
+                                  color: Colors.white,
+                                  subtitle: 'User Name',
+                                  weight: FontWeight.w500,
+                                  size: 15),
                               TextField(
                                 decoration: InputDecoration(
                                   enabledBorder: const OutlineInputBorder(
@@ -120,14 +123,14 @@ class SignUpPage extends StatelessWidget {
                                           dropdownColor: const Color.fromARGB(
                                               255, 4, 17, 65),
                                           isExpanded: true,
-        
+
                                           // Initial Value
                                           value: dropdownvalue,
-        
+
                                           // Down Arrow Icon
                                           icon: const Icon(
                                               Icons.keyboard_arrow_down),
-        
+
                                           // Array list of items
                                           items: items.map((String items) {
                                             return DropdownMenuItem(
@@ -159,7 +162,11 @@ class SignUpPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Multi(color: Colors.white, subtitle: 'Set Password', weight: FontWeight.w500, size: 15),
+                              Multi(
+                                  color: Colors.white,
+                                  subtitle: 'Set Password',
+                                  weight: FontWeight.w500,
+                                  size: 15),
                               TextField(
                                 decoration: InputDecoration(
                                   enabledBorder: const OutlineInputBorder(
@@ -179,7 +186,7 @@ class SignUpPage extends StatelessWidget {
                             ]),
                       ),
                       Container(
-                        height: 230.h ,
+                        height: 230.h,
                         width: 300.w,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -192,7 +199,8 @@ class SignUpPage extends StatelessWidget {
                                 color: Colors.white,
                               ),
                               child: const Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Text(
                                     'Fingerprint Verification',

@@ -28,7 +28,7 @@ class MainPage extends StatelessWidget {
               Container(
                   height: 100.h,
                   width: 150.w,
-                  child: Image.asset('assets/facebook.png')),
+                  child: Image.asset('assets/logo.png')),
               const Text(
                 'Welcome to',
                 style: TextStyle(

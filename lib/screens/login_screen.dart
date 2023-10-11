@@ -30,7 +30,7 @@ class LoginPage extends StatelessWidget {
                               height: 80.h,
                               width: 150.w,
                               child: 
-                              Image.asset('assets/facebook.png')
+                              Image.asset('assets/logo.png')
                               ),
                           const Text(
                             'Inspection App',

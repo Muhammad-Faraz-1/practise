@@ -205,7 +205,7 @@ class FillInspection extends StatelessWidget {
                       child: Container(
                         height: 60.h,
                         width: 100.w,
-                        child: Image.asset('assets/facebook.png')
+                        child: Image.asset('assets/logo.png')
                       ),
                     ),
                     Multi(

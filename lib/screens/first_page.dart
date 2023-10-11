@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sign_up_page_2/multi.dart';
 import 'package:sign_up_page_2/screens/fill_out_inspection.dart';
 import 'package:sign_up_page_2/screens/history_sheet.dart';
+import 'package:sign_up_page_2/screens/user_account.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
@@ -38,7 +39,7 @@ class FirstPage extends StatelessWidget {
                                 Container(
                                     height: 60.h,
                                     width: 150.w,
-                                    child: Image.asset('assets/facebook.png') ),
+                                    child: Image.asset('assets/logo.png') ),
                                 const Text(
                                   'Quality Inspection',
                                   style: TextStyle(
@@ -51,13 +52,51 @@ class FirstPage extends StatelessWidget {
                           ],
                         ),
                       ),
+                      
                       Padding(
-                        padding: const EdgeInsets.all(50),
+                        padding: const EdgeInsets.all(5),
                         child: Container(
-                          height: 170.h,
+                          height: 250.h,
                           child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
+                                Container(
+                                  height: 60.h,
+                                  width: 220,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.5),
+                                          spreadRadius: 7,
+                                          blurRadius: 7,
+                                          offset: Offset(-1,5), // changes position of shadow
+                                        ),
+                                      ]),
+                                  child: ElevatedButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const UserAccount()),
+                                        );
+                                      },
+                                      style: ElevatedButton.styleFrom(
+                                          backgroundColor: const Color.fromARGB(
+                                              255, 0, 49, 92),
+                                          side: BorderSide(
+                                              width: 800.w, color: Colors.black),
+                                          shape: RoundedRectangleBorder(
+                                              //to set border radius to button
+                                              borderRadius:
+                                                  BorderRadius.circular(10))),
+                                      child: Multi(
+                                          color: Colors.white,
+                                          subtitle: 'User Account',
+                                          weight: FontWeight.w500,
+                                          size: 15)),
+                                ),
                                 Container(
                                   height: 60.h,
                                   decoration: BoxDecoration(

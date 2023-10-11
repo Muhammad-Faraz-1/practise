@@ -388,7 +388,7 @@ class HistorySheet extends StatelessWidget {
                           child: Container(
                               height: 60.h,
                               width: 100.w,
-                              child: Image.asset('assets/facebook.png')),
+                              child: Image.asset('assets/logo.png')),
                         ),
                         Multi(
                             color: const Color.fromARGB(255, 0, 49, 92),
