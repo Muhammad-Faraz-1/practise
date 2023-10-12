@@ -7,7 +7,7 @@ class Multi extends StatelessWidget {
   String subtitle;
   FontWeight weight;
   double size;
-  Multi({super.key,required this.color,required this.subtitle,required this.weight,required this.size});
+  Multi( {super.key,required this.color,required this.subtitle,required this.weight,required this.size});
 
 
   @override

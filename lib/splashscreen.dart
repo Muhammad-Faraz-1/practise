@@ -52,7 +52,7 @@ class splash extends StatelessWidget {
         width: double.infinity,
         color: const Color.fromARGB(255, 4, 17, 65),
         child:  Padding(
-          padding:const EdgeInsets.only(top: 350),
+          padding:const EdgeInsets.only(top: 320),
           child: Column(
             children: [
               Padding(

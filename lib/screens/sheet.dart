@@ -1,19 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:omni_datetime_picker/omni_datetime_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:sign_up_page_2/multi.dart';
 import 'package:sign_up_page_2/screens/first_page.dart';
 import 'package:sign_up_page_2/statemaneger/Provider.dart';
-import 'package:sign_up_page_2/widgets/nested_table.dart';
+import 'package:sign_up_page_2/widgets/date_pick.dart';
+import 'package:sign_up_page_2/widgets/omni_date_picker.dart';
+import 'package:sign_up_page_2/widgets/popup.dart';
 import 'package:sign_up_page_2/widgets/table.dart';
 
-class Sheet extends StatelessWidget {
-  const Sheet({
+class Sheet extends StatefulWidget {
+  Sheet({
     super.key,
   });
 
   @override
+  State<Sheet> createState() => _SheetState();
+}
+
+class _SheetState extends State<Sheet> {
+  @override
+   String date = '';
+    String time = '';
   Widget build(BuildContext context) {
+   
     final Provider11 = Provider.of<Provider1>(context);
     return SafeArea(
         child: Scaffold(
@@ -95,79 +106,58 @@ class Sheet extends StatelessWidget {
                           children: [
                             Align(
                               alignment: Alignment.topLeft,
-                              child: Multi(
-                                  color: const Color.fromARGB(255, 4, 17, 65),
-                                  subtitle: 'Inspection Date',
-                                  weight: FontWeight.w500,
-                                  size: 18),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Multi(
+                                      color:
+                                          const Color.fromARGB(255, 4, 17, 65),
+                                      subtitle: 'Inspection Date',
+                                      weight: FontWeight.w500,
+                                      size: 18),
+                                  TextButton(
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return Popup();
+                                          },
+                                        );
+                                      },
+                                      child: Multi(
+                                          color: const Color.fromARGB(
+                                              255, 4, 17, 65),
+                                          subtitle: 'Verify',
+                                          weight: FontWeight.w500,
+                                          size: 18)),
+                                  // TextButton(
+                                  //     onPressed: () {
+                                  //       Navigator.push(
+                                  //           context,
+                                  //           MaterialPageRoute(
+                                  //               builder: (context) =>
+                                  //                   const OmniDatePicker()));
+                                  //     },
+                                  //     child: Multi(
+                                  //         color: const Color.fromARGB(
+                                  //             255, 4, 17, 65),
+                                  //         subtitle: 'datepick',
+                                  //         weight: FontWeight.w500,
+                                  //         size: 10))
+                                ],
+                              ),
                             ),
                             SizedBox(
                               height: 10.h,
                             ),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               // crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      height: 50.h,
-                                      width: 140.w,
-                                      decoration: const BoxDecoration(
-                                        color: Colors.black,
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(0.5),
-                                        child: Container(
-                                          height: 49.5.h,
-                                          width: 139.5.w,
-                                          decoration: const BoxDecoration(
-                                            color: Colors.white,
-                                          ),
-                                          child: const Row(
-                                            children: [
-                                              Expanded(
-                                                child: Padding(
-                                                  padding: EdgeInsets.all(8.0),
-                                                  child: TextField(
-                                                    decoration: InputDecoration(
-                                                        border:
-                                                            InputBorder.none,
-                                                        hintText: '13/12/2001',
-                                                        hintStyle: TextStyle(
-                                                            fontSize: 15,
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    175,
-                                                                    175,
-                                                                    175))),
-                                                  ),
-                                                ),
-                                              ),
-                                              Icon(Icons.calendar_month),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.only(right: 110),
-                                      child: Multi(
-                                          color: const Color.fromARGB(
-                                              255, 175, 175, 175),
-                                          subtitle: 'Date',
-                                          weight: FontWeight.w500,
-                                          size: 12),
-                                    )
-                                  ],
-                                ),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Container(
                                       height: 50.h,
@@ -183,31 +173,50 @@ class Sheet extends StatelessWidget {
                                           decoration: const BoxDecoration(
                                             color: Colors.white,
                                           ),
-                                          child: const Row(
-                                            children: [
-                                              Expanded(
-                                                child: Padding(
-                                                  padding: EdgeInsets.all(8.0),
-                                                  child: TextField(
-                                                    decoration: InputDecoration(
-                                                        border:
-                                                            InputBorder.none,
-                                                        hintText: 'HH:MM',
-                                                        hintStyle: TextStyle(
-                                                            fontSize: 15,
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            color:
-                                                                Color.fromARGB(
-                                                                    255,
-                                                                    175,
-                                                                    175,
-                                                                    175))),
-                                                  ),
-                                                ),
-                                              ),
-                                              Icon(Icons.calendar_month),
-                                            ],
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(top: 20,left: 10),
+                                            child: Multi(
+                                                color: Color.fromARGB(
+                                                    255, 0, 0, 0),
+                                                subtitle: date,
+                                                weight: FontWeight.w500,
+                                                size: 15),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Multi(
+                                        color: const Color.fromARGB(
+                                            255, 175, 175, 175),
+                                        subtitle: 'Date',
+                                        weight: FontWeight.w500,
+                                        size: 12)
+                                  ],
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      height: 50.h,
+                                      width: 100.w,
+                                      decoration: const BoxDecoration(
+                                        color: Colors.black,
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(0.5),
+                                        child: Container(
+                                          height: 49.5.h,
+                                          width: 99.5.w,
+                                          decoration: const BoxDecoration(
+                                            color: Colors.white,
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(top: 20,left: 10),
+                                            child: Multi(
+                                                color: Color.fromARGB(255, 0, 0, 0),
+                                                subtitle: time,
+                                                weight: FontWeight.w500,
+                                                size: 15),
                                           ),
                                         ),
                                       ),
@@ -217,90 +226,80 @@ class Sheet extends StatelessWidget {
                                       child: Multi(
                                           color: const Color.fromARGB(
                                               255, 175, 175, 175),
-                                          subtitle: 'Hours: Minutes',
+                                          subtitle: 'Time',
                                           weight: FontWeight.w500,
                                           size: 12),
                                     )
                                   ],
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(bottom: 15),
-                                  child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Container(
-                                        height: 25.h,
-                                        width: 35.w,
-                                        decoration: const BoxDecoration(
-                                          color: Colors.black,
-                                        ),
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(0.5),
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              
-                                              Provider11.changeTime(0);
-                                            },
-                                            child: Container(
-                                              height: 24.5.h,
-                                              width: 35.5.w,
-                                              decoration: BoxDecoration(
-                                                color: Provider11.indexx == 0
-                                                    ? Colors.amberAccent
-                                                    : Colors.white,
+                                Column(
+                                  children: [
+                                    Container(
+                                        height: 50.h,
+                                        width: 30.w,
+                                        child: IconButton(
+                                          onPressed: () async {
+                                            DateTime? dateTime =
+                                                await showOmniDateTimePicker(
+                                              context: context,
+                                              initialDate: DateTime.now(),
+                                              firstDate: DateTime(1600).subtract(
+                                                  const Duration(days: 3652)),
+                                              lastDate: DateTime.now().add(
+                                                const Duration(days: 3652),
                                               ),
-                                              child: Align(
-                                                  alignment: Alignment.center,
-                                                  child: Multi(
-                                                      color:
-                                                          const Color.fromARGB(
-                                                              255,
-                                                              175,
-                                                              175,
-                                                              175),
-                                                      subtitle: 'AM',
-                                                      weight: FontWeight.w600,
-                                                      size: 12)),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        height: 25.h,
-                                        width: 34.5.w,
-                                        decoration: const BoxDecoration(
-                                          color: Colors.black,
-                                        ),
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(0.5),
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              Provider11.changeTime(1);
-                                            },
-                                            child: Container(
-                                                height: 24.5.h,
-                                                width: 34.5.w,
-                                                decoration: BoxDecoration(
-                                                  color: Provider11.indexx == 1
-                                                      ? Colors.amberAccent
-                                                      : Colors.white,
-                                                ),
-                                                child: Align(
-                                                    alignment: Alignment.center,
-                                                    child: Multi(
-                                                        color: const Color
-                                                                .fromARGB(
-                                                            255, 175, 175, 175),
-                                                        subtitle: 'PM',
-                                                        weight: FontWeight.w600,
-                                                        size: 12))),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
+                                              is24HourMode: false,
+                                              isShowSeconds: false,
+                                              minutesInterval: 1,
+                                              secondsInterval: 1,
+                                              isForce2Digits: true,
+                                              borderRadius: const BorderRadius.all(
+                                                  Radius.circular(16)),
+                                              constraints: const BoxConstraints(
+                                                maxWidth: 350,
+                                                maxHeight: 650,
+                                              ),
+                                              transitionBuilder:
+                                                  (context, anim1, anim2, child) {
+                                                return FadeTransition(
+                                                  opacity: anim1.drive(
+                                                    Tween(
+                                                      begin: 0,
+                                                      end: 1,
+                                                    ),
+                                                  ),
+                                                  child: child,
+                                                );
+                                              },
+                                              transitionDuration:
+                                                  const Duration(milliseconds: 200),
+                                              barrierDismissible: true,
+                                              selectableDayPredicate: (dateTime) {
+                                                // Disable 25th Feb 2023
+                                                if (dateTime ==
+                                                    DateTime(2023, 2, 25)) {
+                                                  return false;
+                                                } else {
+                                                  return true;
+                                                }
+                                              },
+                                            );
+                                            print(dateTime);
+                                            setState(() {
+                                              date = dateTime
+                                                  .toString()
+                                                  .substring(0, 10);
+                                              time = dateTime
+                                                  .toString()
+                                                  .substring(11, 19);
+                                            });
+                                          },
+                                          icon: Icon(Icons.calendar_month),
+                                          iconSize: 35,
+                                        )),
+                                        
+                                  ],
+                                )
                               ],
                             ),
                           ],
@@ -316,16 +315,14 @@ class Sheet extends StatelessWidget {
                         subtitle: 'Engine',
                         weight: FontWeight.w600,
                         size: 20),
-                    const Divider(
-                      thickness: 0.5,
-                      color: Color.fromARGB(255, 4, 17, 65),
+                    SizedBox(
+                      height: 10.h,
                     ),
                     Container(
                       height: 250.h,
                       width: double.infinity,
-                      
                       child: Padding(
-                        padding: const EdgeInsets.all(8),
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Table1(),
                       ),
                     ),
@@ -372,27 +369,32 @@ class Sheet extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 10, top: 10),
                             child: Container(
-                                height: 60.h,
-                                width: 100.w,
+                                height: 40.h,
+                                width: 80.w,
                                 child: Image.asset('assets/logo.png')),
                           ),
-                          Multi(
-                              color: const Color.fromARGB(255, 0, 49, 92),
-                              subtitle: 'Fill out inspection sheet',
-                              weight: FontWeight.w500,
-                              size: 18)
+                          SizedBox(
+                            width: 30.h,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 7),
+                            child: Multi(
+                                color: const Color.fromARGB(255, 0, 49, 92),
+                                subtitle: 'Fill Out Inspection Sheet',
+                                weight: FontWeight.w500,
+                                size: 18),
+                          )
                         ],
                       ),
                       const Divider(
-                        thickness: 0.5,
+                        thickness: 0.7,
                         color: Color.fromARGB(255, 4, 17, 65),
-                      )
+                      ),
                     ],
                   ),
                 ),

@@ -37,7 +37,7 @@ class LoginPage extends StatelessWidget {
                             style: TextStyle(
                                 color: Color.fromARGB(255, 255, 255, 255),
                                 fontSize: 25,
-                                fontWeight: FontWeight.bold),
+                                fontWeight: FontWeight.w500),
                           ),
                         ],
                       ),
@@ -51,15 +51,15 @@ class LoginPage extends StatelessWidget {
                             'Welcome to Inspection App',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 255, 255, 255),
-                                fontSize: 15,
-                                fontWeight: FontWeight.w300),
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500),
                           ),
                           Text(
                             'Log In To Your Account',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 255, 255, 255),
-                                fontSize: 15,
-                                fontWeight: FontWeight.w300),
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500),
                           ),
                         ],
                       ),
@@ -86,7 +86,7 @@ class LoginPage extends StatelessWidget {
                                 hintText: 'USERNAME',
                                 hintStyle: const TextStyle(
                                     color: Color.fromARGB(255, 117, 111, 111),
-                                    fontWeight: FontWeight.w500,fontSize: 20),
+                                    fontWeight: FontWeight.w500,fontSize: 15),
                               ),
                             ),
                             TextField(
@@ -105,7 +105,7 @@ class LoginPage extends StatelessWidget {
                                 hintText: 'PASSWORD',
                                 hintStyle: const TextStyle(
                                     color: Color.fromARGB(255, 117, 111, 111),
-                                    fontWeight: FontWeight.w500,fontSize: 20),
+                                    fontWeight: FontWeight.w500,fontSize: 15),
                               ),
                             ),
                             Container(

@@ -34,14 +34,14 @@ class MainPage extends StatelessWidget {
                 style: TextStyle(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontSize: 25,
-                    fontWeight: FontWeight.w300),
+                    fontWeight: FontWeight.w500),
               ),
               const Text(
                 'Inspection App',
                 style: TextStyle(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontSize: 25,
-                    fontWeight: FontWeight.w300),
+                    fontWeight: FontWeight.w500),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(25, 150, 25, 5),

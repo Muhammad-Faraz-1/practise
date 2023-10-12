@@ -25,21 +25,16 @@ class Date extends StatelessWidget {
               decoration: const BoxDecoration(
                 color: Colors.white,
               ),
-              child: const Row(
+              child: Row(
                 children: [
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: '13/12/2001',
-                            hintStyle: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                                color: Color.fromARGB(255, 175, 175, 175))),
-                      ),
-                    ),
+                        padding: EdgeInsets.all(8.0),
+                        child: Multi(
+                            color: Color.fromARGB(255, 175, 175, 175),
+                            subtitle: '13/12/2001',
+                            weight: FontWeight.w600,
+                            size: 15)),
                   ),
                   Icon(Icons.calendar_month),
                 ],
@@ -63,9 +58,7 @@ class Button extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255,227, 235, 250)
-          ),
-          
+              backgroundColor: Color.fromARGB(255, 227, 235, 250)),
           child: Multi(
               color: const Color.fromARGB(255, 0, 49, 92),
               subtitle: 'Visit',

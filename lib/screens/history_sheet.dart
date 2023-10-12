@@ -376,34 +376,39 @@ class HistorySheet extends StatelessWidget {
                 ],
               ),
               Align(
-                alignment: Alignment.topCenter,
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                    alignment: Alignment.topCenter,
+                    child: Column(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 10),
-                          child: Container(
-                              height: 60.h,
-                              width: 100.w,
-                              child: Image.asset('assets/logo.png')),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10, top: 10),
+                              child: Container(
+                                  height: 40.h,
+                                  width: 80.w,
+                                  child: Image.asset('assets/logo.png')),
+                            ),
+                            SizedBox(
+                              width: 20.h,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 12),
+                              child: Multi(
+                                  color: const Color.fromARGB(255, 0, 49, 92),
+                                  subtitle: 'Fill Out Inspection Sheet',
+                                  weight: FontWeight.w500,
+                                  size: 18),
+                            )
+                          ],
                         ),
-                        Multi(
-                            color: const Color.fromARGB(255, 0, 49, 92),
-                            subtitle: 'Fill out inspection sheet',
-                            weight: FontWeight.w500,
-                            size: 18)
+                        const Divider(
+                          thickness: 0.7,
+                          color: Color.fromARGB(255, 4, 17, 65),
+                        ),
                       ],
                     ),
-                    const Divider(
-                      thickness: 0.5,
-                      color: Color.fromARGB(255, 4, 17, 65),
-                    )
-                  ],
-                ),
-              ),
+                  ),
             ],
           ),
         )
