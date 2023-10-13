@@ -5,6 +5,7 @@ import 'package:sign_up_page_2/multi.dart';
 import 'package:sign_up_page_2/screens/first_page.dart';
 import 'package:sign_up_page_2/screens/login_screen.dart';
 import 'package:sign_up_page_2/statemaneger/Provider.dart';
+import 'package:sign_up_page_2/widgets/popup.dart';
 
 class SignUpPage extends StatelessWidget {
   String dropdownvalue = 'QCI';
@@ -35,31 +36,31 @@ class SignUpPage extends StatelessWidget {
                 hasScrollBody: false,
                 child: Padding(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 25, horizontal: 20),
+                      const EdgeInsets.symmetric( horizontal: 20),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        height: 100.h,
-                        width: 300.h,
+                        height: 80.h,
+                        width: 300.w,
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                  height: 60.h,
+                                  height: 40.h,
                                   width: 150.w,
                                   child: Image.asset('assets/logo.png')),
                               Multi(
-                                  color: Colors.white,
+                                  color: Colors.red,
                                   subtitle: 'Registration',
                                   weight: FontWeight.w500,
                                   size: 25)
                             ]),
                       ),
                       Container(
-                        height: 100.h,
+                        height: 70.h,
                         width: 300.w,
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,7 +72,7 @@ class SignUpPage extends StatelessWidget {
                                   weight: FontWeight.w500,
                                   size: 15),
                               TextField(
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(color: Colors.white,fontSize: 15),
                                 decoration: InputDecoration(
                                   enabledBorder: const OutlineInputBorder(
                                     borderSide: BorderSide(color: Colors.white),
@@ -85,13 +86,13 @@ class SignUpPage extends StatelessWidget {
                                   
                                   hintText: 'Amir Hassan',
                                   hintStyle:
-                                      const TextStyle(color: Colors.white),
+                                      const TextStyle(color: Colors.white,fontSize: 15),
                                 ),
                               ),
                             ]),
                       ),
                       Container(
-                        height: 100.h,
+                        height: 70.h,
                         width: 300.w,
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -102,7 +103,7 @@ class SignUpPage extends StatelessWidget {
                                 style: TextStyle(
                                     color: Color.fromARGB(255, 255, 255, 255),
                                     fontSize: 15,
-                                    fontWeight: FontWeight.w300),
+                                    fontWeight: FontWeight.w500),
                               ),
                               Container(
                                 height: 50.h,
@@ -158,7 +159,67 @@ class SignUpPage extends StatelessWidget {
                             ]),
                       ),
                       Container(
-                        height: 100.h,
+                        height: 70.h,
+                        width: 300.w,
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Multi(
+                                  color: Colors.white,
+                                  subtitle: 'Trade:',
+                                  weight: FontWeight.w500,
+                                  size: 15),
+                              TextField(
+                                style: TextStyle(color: Colors.white,fontSize: 12),
+                                decoration: InputDecoration(
+                                  enabledBorder: const OutlineInputBorder(
+                                    borderSide: BorderSide(color: Colors.white),
+                                  ),
+                                  focusedBorder: const OutlineInputBorder(
+                                      borderSide:
+                                          BorderSide(color: Colors.white)),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  
+                                  
+                                ),
+                              ),
+                            ]),
+                      ),
+                      Container(
+                        height:70.h,
+                        width: 300.w,
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Multi(
+                                  color: Colors.white,
+                                  subtitle: 'Army Number:',
+                                  weight: FontWeight.w500,
+                                  size: 15),
+                              TextField(
+                                style: TextStyle(color: Colors.white,fontSize: 12),
+                                decoration: InputDecoration(
+                                  enabledBorder: const OutlineInputBorder(
+                                    borderSide: BorderSide(color: Colors.white),
+                                  ),
+                                  focusedBorder: const OutlineInputBorder(
+                                      borderSide:
+                                          BorderSide(color: Colors.white)),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  
+                                  
+                                ),
+                              ),
+                            ]),
+                      ),
+                      Container(
+                        height: 70.h,
                         width: 300.w,
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -170,8 +231,10 @@ class SignUpPage extends StatelessWidget {
                                   weight: FontWeight.w500,
                                   size: 15),
                               TextField(
-                                style: TextStyle(color: Colors.white),
+                                obscureText: true,
+                                style: TextStyle(color: Colors.white,fontSize: 12),
                                 decoration: InputDecoration(
+                                  
                                   enabledBorder: const OutlineInputBorder(
                                     borderSide: BorderSide(color: Colors.white),
                                   ),
@@ -181,6 +244,7 @@ class SignUpPage extends StatelessWidget {
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(10),
                                   ),
+                                  
                                   hintText: '**********',
                                   hintStyle:
                                       const TextStyle(color: Colors.white),
@@ -194,20 +258,30 @@ class SignUpPage extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Container(
-                              height: 180.h,
-                              width: double.infinity.w,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.white,
-                              ),
-                              child:  Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Multi(color: Colors.black, subtitle: 'FingerPrint Verification', weight: FontWeight.w500, size: 15),
-                                  Image.asset('assets/182486.png')
-                                ],
+                            GestureDetector(
+                              onTap: () {
+                                showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return Popup();
+                                          },
+                                        );
+                              },
+                              child: Container(
+                                height: 180.h,
+                                width: double.infinity.w,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: Colors.white,
+                                ),
+                                child:  Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Multi(color: Colors.black, subtitle: 'FingerPrint Verification', weight: FontWeight.w500, size: 15),
+                                    Image.asset('assets/182486.png')
+                                  ],
+                                ),
                               ),
                             ),
                             Align(

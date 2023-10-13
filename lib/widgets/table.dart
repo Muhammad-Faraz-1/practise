@@ -35,16 +35,16 @@ class Table1 extends StatelessWidget {
                       flex: 2,
                       child: TableText(text: 'Auth')),
                   ),
-                   DataColumn(
-                    label: Expanded(
-                      flex: 2,
-                      child: TableText(text: 'asad')),
-                  ),
-                  DataColumn(
-                    label: Expanded(
-                      flex: 2,
-                      child: TableText(text: 'asad')),
-                  ),
+                  //  DataColumn(
+                  //   label: Expanded(
+                  //     flex: 2,
+                  //     child: TableText(text: 'asad')),
+                  // ),
+                  // DataColumn(
+                  //   label: Expanded(
+                  //     flex: 2,
+                  //     child: TableText(text: 'asad')),
+                  // ),
                   DataColumn(
                     
                     label: Expanded(
@@ -60,69 +60,69 @@ class Table1 extends StatelessWidget {
                     DataCell(TableText(text: '1')),
                     DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
                     DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
-                    DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
-                    DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
+                    // DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
+                    // DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
                     
                   ]),
                   DataRow(cells: [
                     DataCell(TableText(text: '1')),
                     DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
                     DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
-                    DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
-                    DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
+                    // DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
+                    // DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
                     
                   ]),
                   DataRow(cells: [
                     DataCell(TableText(text: '1')),
                     DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
                     DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
-                    DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
-                    DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
+                    // DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
+                    // DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
                     
                   ]),
                   DataRow(cells: [
                     DataCell(TableText(text: '1')),
                     DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
                     DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
-                    DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
-                    DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
+                    // DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
+                    // DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
                     
                   ]),
                   DataRow(cells: [
                     DataCell(TableText(text: '1')),
                     DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
                     DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
-                    DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
-                    DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
+                    // DataCell(TableText(text: 'ALEX bhatti kdsbfkasdn,masndm,')),
+                    // DataCell(TableText(text: "sajghjfa djhsfhd jsajsa jnsajd")),
                     
                   ]),
                   DataRow(cells: [
                     DataCell(TableText(text: '1')),
                     DataCell(TableText(text: 'ALEX bhatti')),
                     DataCell(TableText(text: "sajghjfa djhsfhd")),
-                    DataCell(TableText(text: 'ALEX bhatti')),
-                    DataCell(TableText(text: "sajghjfa djhsfhd")),
+                    // DataCell(TableText(text: 'ALEX bhatti')),
+                    // DataCell(TableText(text: "sajghjfa djhsfhd")),
                   ]),
                    DataRow(cells: [
                      DataCell(TableText(text: '1')),
                     DataCell(TableText(text: 'ALEX bhatti')),
                     DataCell(TableText(text: "sajghjfa djhsfhd basb basdb absdn")),
-                    DataCell(TableText(text: 'ALEX bhatti')),
-                    DataCell(TableText(text: "sajghjfa djhsfhd")),
+                    // DataCell(TableText(text: 'ALEX bhatti')),
+                    // DataCell(TableText(text: "sajghjfa djhsfhd")),
                   ]),
                    DataRow(cells: [
                      DataCell(TableText(text: '1')),
                    DataCell(TableText(text: 'ALEX bhatti')),
                     DataCell(TableText(text: "sajghjfa djhsfhd")),
-                    DataCell(TableText(text: 'ALEX bhatti')),
-                    DataCell(TableText(text: "sajghjfa djhsfhd")),
+                    // DataCell(TableText(text: 'ALEX bhatti')),
+                    // DataCell(TableText(text: "sajghjfa djhsfhd")),
                   ]),
                    DataRow(cells: [
                     DataCell(TableText(text: '1')),
                     DataCell(TableText(text: 'ALEX bhatti')),
                     DataCell(TableText(text: "sajghjfa djhsfhd")),
-                    DataCell(TableText(text: 'ALEX bhatti')),
-                    DataCell(TableText(text: "sajghjfa djhsfhd")),
+                    // DataCell(TableText(text: 'ALEX bhatti')),
+                    // DataCell(TableText(text: "sajghjfa djhsfhd")),
                   ]),
                 ]),
           ),

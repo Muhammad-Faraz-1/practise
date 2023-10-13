@@ -1,30 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:omni_datetime_picker/omni_datetime_picker.dart';
-import 'package:provider/provider.dart';
 import 'package:sign_up_page_2/multi.dart';
 import 'package:sign_up_page_2/screens/first_page.dart';
-import 'package:sign_up_page_2/screens/update_sheet.dart';
-import 'package:sign_up_page_2/statemaneger/Provider.dart';
+import 'package:sign_up_page_2/widgets/popup.dart';
 import 'package:sign_up_page_2/widgets/table.dart';
 
-class Sheet extends StatefulWidget {
-  Sheet({
-    super.key,
-  });
+class UpdateSheet extends StatefulWidget {
+  const UpdateSheet({super.key});
 
   @override
-  State<Sheet> createState() => _SheetState();
+  State<UpdateSheet> createState() => _UpdateSheetState();
 }
 
-class _SheetState extends State<Sheet> {
+class _UpdateSheetState extends State<UpdateSheet> {
   @override
-   String date = '';
+  String date = '';
     String time = '';
   Widget build(BuildContext context) {
-   
-    final Provider11 = Provider.of<Provider1>(context);
-    return SafeArea(
+     
+     return SafeArea(
         child: Scaffold(
       body: CustomScrollView(
         slivers: [
@@ -50,7 +45,7 @@ class _SheetState extends State<Sheet> {
                             Align(
                               alignment: Alignment.topLeft,
                               child: Container(
-                                  height: 30.h,
+                                  height: 40.h,
                                   width: 85.w,
                                   child: TextButton(
                                     onPressed: () {
@@ -72,13 +67,13 @@ class _SheetState extends State<Sheet> {
                                 Multi(
                                   color: const Color.fromARGB(255, 19, 14, 85),
                                   subtitle: '25 HRS INSPECTION CHECK ',
-                                  weight: FontWeight.w600,
+                                  weight: FontWeight.w500,
                                   size: 18,
                                 ),
                                 Multi(
                                   color: const Color.fromARGB(255, 19, 14, 85),
                                   subtitle: 'SHEET OF Mi 171 HEL (KAZAN)',
-                                  weight: FontWeight.w600,
+                                  weight: FontWeight.w500,
                                   size: 18,
                                 ),
                               ],
@@ -114,6 +109,7 @@ class _SheetState extends State<Sheet> {
                                       subtitle: 'Inspection Date',
                                       weight: FontWeight.w500,
                                       size: 18),
+                                  
                                   
                                 ],
                               ),
@@ -295,16 +291,18 @@ class _SheetState extends State<Sheet> {
                         child: Table1(),
                       ),
                     ),
+                    
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         ElevatedButton(
                             onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const UpdateSheet()),
-                              );
+                               showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return Popup();
+                                          },
+                                        );
                             },
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.white,
@@ -342,7 +340,6 @@ class _SheetState extends State<Sheet> {
                 Align(
                   alignment: Alignment.topCenter,
                   child: Column(
-                    
                     children: [
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -361,7 +358,7 @@ class _SheetState extends State<Sheet> {
                             padding: const EdgeInsets.only(top: 15),
                             child: Multi(
                                 color: const Color.fromARGB(255, 0, 49, 92),
-                                subtitle: 'Fill Out Inspection Sheet',
+                                subtitle: 'Update Sheet',
                                 weight: FontWeight.w500,
                                 size: 15),
                           )

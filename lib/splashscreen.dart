@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:sign_up_page_2/screens/main_page.dart';
+import 'package:sign_up_page_2/widgets/shadow_text.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     Timer(
-        const Duration(seconds:5),
+        const Duration(seconds:10),
         () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => const MainPage())));
   }
@@ -50,7 +51,12 @@ class splash extends StatelessWidget {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        color: const Color.fromARGB(255, 4, 17, 65),
+       
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [
+          Color.fromARGB(255, 4, 17, 65),
+          Color.fromARGB(255, 112, 10, 10)
+        ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
         child:  Padding(
           padding:const EdgeInsets.only(top: 320),
           child: Column(
@@ -59,8 +65,11 @@ class splash extends StatelessWidget {
                 padding:const EdgeInsets.all(15),
                 child: Image.asset('assets/logo.png')  ,
               ),
-              const Text('Welcome to',style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25,fontWeight: FontWeight.w400),),
-              const Text('Inspection App',style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25,fontWeight: FontWeight.w400))
+              ShadowText(text: 'Welcome to', size: 25, color: Color.fromARGB(255, 255, 255, 255), weight:FontWeight.w400, shadowColor: Color.fromARGB(255, 155, 13, 23)),
+              ShadowText(text: 'Inspection App', size: 25, color: Color.fromARGB(255, 255, 255, 255), weight:FontWeight.w400, shadowColor: Color.fromARGB(255, 155, 13, 23)),
+
+              // const Text('Welcome to',style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25,fontWeight: FontWeight.w400),),
+              // const Text('Inspection App',style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 25,fontWeight: FontWeight.w400))
             ],
           ),
         ),

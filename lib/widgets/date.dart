@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sign_up_page_2/multi.dart';
+import 'package:sign_up_page_2/screens/update_sheet.dart';
+import 'package:sign_up_page_2/screens/visit_sheet.dart';
 
 class Date extends StatelessWidget {
   const Date({super.key});
@@ -8,11 +10,11 @@ class Date extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      flex: 3,
+      flex: 4,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          height: 50.h,
+          height: 40.h,
           width: 140.w,
           decoration: const BoxDecoration(
             color: Colors.black,
@@ -20,7 +22,7 @@ class Date extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(0.5),
             child: Container(
-              height: 49.5.h,
+              height: 39.5.h,
               width: 139.5.w,
               decoration: const BoxDecoration(
                 color: Colors.white,
@@ -55,15 +57,23 @@ class Button extends StatelessWidget {
     return Expanded(
       flex: 2,
       child: Container(
+        height: 40.h,
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const VisitSheet()),
+                              );
+          },
           style: ElevatedButton.styleFrom(
-              backgroundColor: Color.fromARGB(255, 227, 235, 250)),
+            elevation: 0.0,
+              backgroundColor: const Color.fromARGB(255, 0, 49, 92)),
           child: Multi(
-              color: const Color.fromARGB(255, 0, 49, 92),
+              color: const Color.fromARGB(255, 255,255,255),
               subtitle: 'Visit',
               weight: FontWeight.w500,
-              size: 18),
+              size: 20),
         ),
       ),
     );

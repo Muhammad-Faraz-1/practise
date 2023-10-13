@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sign_up_page_2/multi.dart';
+import 'package:sign_up_page_2/screens/history_sheet.dart';
 
 class Popup extends StatelessWidget {
   const Popup({super.key});
@@ -20,8 +21,16 @@ class Popup extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Multi(color: Colors.white, subtitle: 'Confirm Identity', weight: FontWeight.w500, size: 25),
-                    Image.asset('assets/182486.png',color: Colors.white)
-                    
+                    Image.asset('assets/182486.png',color: Colors.white),
+                    TextButton(
+                                      onPressed: () {
+                                       Navigator.of(context).pop();
+                                      },
+                                      child: Multi(
+                                          color: const Color.fromARGB(255, 255, 255, 255),
+                                          subtitle: 'Verify',
+                                          weight: FontWeight.w500,
+                                          size: 18)),
                   ],
                 ),
               ),

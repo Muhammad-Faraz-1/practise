@@ -137,7 +137,7 @@ class UserAccount extends StatelessWidget {
                       ),],),
                    ),
                     SizedBox(
-                      height: 50.h,
+                      height: 20.h,
                     ),
                     Container(
                       height: 200.h,
@@ -254,7 +254,7 @@ class UserAccount extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
-                          width: 100.w,
+                          width: 130.w,
                           height: 40.h,
                           child: ElevatedButton(
                               onPressed: () {
@@ -275,7 +275,7 @@ class UserAccount extends StatelessWidget {
                                   size: 15)),
                         ),
                         Container(
-                          width: 100.w,
+                          width: 130.w,
                           height: 40.h,
                           child: ElevatedButton(
                               onPressed: () {
@@ -298,9 +298,13 @@ class UserAccount extends StatelessWidget {
                         )
                       ],
                     ),
+                    SizedBox(
+                      height: 10.h,
+                      width: 300.w,
+                    ),
                     Container(
                         height: 40.h,
-                        width: 85.w,
+                        width: 100.w,
                         child: TextButton(
                           onPressed: () {
                             Navigator.of(context).pop();

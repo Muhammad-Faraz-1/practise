@@ -55,8 +55,8 @@ class FillInspection extends StatelessWidget {
                               Multi(
                                   color: Color.fromARGB(255, 0, 0, 0),
                                   subtitle: 'Select Helicoptor For Inspection',
-                                  weight: FontWeight.bold,
-                                  size: 15),
+                                  weight: FontWeight.w500,
+                                  size: 18),
                               SizedBox(
                                 height: 15.h,
                                 width: 300.w,
@@ -220,7 +220,7 @@ class FillInspection extends StatelessWidget {
                                   color: const Color.fromARGB(255, 0, 49, 92),
                                   subtitle: 'Fill Out Inspection Sheet',
                                   weight: FontWeight.w500,
-                                  size: 18),
+                                  size: 15),
                             )
                           ],
                         ),

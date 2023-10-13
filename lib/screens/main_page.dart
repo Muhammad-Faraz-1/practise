@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:sign_up_page_2/screens/login_screen.dart';
 import 'package:sign_up_page_2/screens/sign_up_screen.dart';
 import 'package:sign_up_page_2/statemaneger/Provider.dart';
+import 'package:sign_up_page_2/widgets/shadow_text.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -29,20 +30,10 @@ class MainPage extends StatelessWidget {
                   height: 100.h,
                   width: 150.w,
                   child: Image.asset('assets/logo.png')),
-              const Text(
-                'Welcome to',
-                style: TextStyle(
-                    color: Color.fromARGB(255, 255, 255, 255),
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500),
-              ),
-              const Text(
-                'Inspection App',
-                style: TextStyle(
-                    color: Color.fromARGB(255, 255, 255, 255),
-                    fontSize: 25,
-                    fontWeight: FontWeight.w500),
-              ),
+                            ShadowText(text: 'Welcome to', size: 30, color: Color.fromARGB(255, 255, 255, 255), weight:FontWeight.w400, shadowColor: Color.fromARGB(255, 155, 13, 23)),
+
+                            ShadowText(text: 'Inspection App', size: 25, color: Color.fromARGB(255, 255, 255, 255), weight:FontWeight.w400, shadowColor: Color.fromARGB(255, 155, 13, 23)),
+
               Padding(
                 padding: const EdgeInsets.fromLTRB(25, 150, 25, 5),
                 child: Container(

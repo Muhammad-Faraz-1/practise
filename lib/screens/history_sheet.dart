@@ -25,7 +25,7 @@ class HistorySheet extends StatelessWidget {
               Column(
                 children: [
                   Container(
-                    height: 170.h,
+                    height: 150.h,
                     width: double.infinity.w,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -34,7 +34,7 @@ class HistorySheet extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           SizedBox(
-                            height: 70.h,
+                            height: 40.h,
                             width: 300.w,
                           ),
                           Align(
@@ -62,13 +62,13 @@ class HistorySheet extends StatelessWidget {
                               Multi(
                                 color: const Color.fromARGB(255, 19, 14, 85),
                                 subtitle: '25 HRS INSPECTION CHECK ',
-                                weight: FontWeight.w500,
+                                weight: FontWeight.w700,
                                 size: 18,
                               ),
                               Multi(
                                 color: const Color.fromARGB(255, 19, 14, 85),
                                 subtitle: 'SHEET OF Mi 171 HEL (KAZAN)',
-                                weight: FontWeight.w500,
+                                weight: FontWeight.w700,
                                 size: 18,
                               ),
                             ],
@@ -86,7 +86,7 @@ class HistorySheet extends StatelessWidget {
                   ),
                   Container(
                     width: double.infinity.w,
-                    height: 80.h,
+                    height: 60.h,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 25),
                       child: Column(
@@ -98,10 +98,10 @@ class HistorySheet extends StatelessWidget {
                                 color: const Color.fromARGB(255, 4, 17, 65),
                                 subtitle: 'Inspection List',
                                 weight: FontWeight.w500,
-                                size: 18),
+                                size: 20),
                           ),
                           SizedBox(
-                            height: 10.h,
+                            height: 5.h,
                           ),
                         ],
                       ),
@@ -109,267 +109,271 @@ class HistorySheet extends StatelessWidget {
                   ),
                   Container(
                     width: 350.w,
-                    height: 350.h,
+                    height: 420.h,
                     child: SingleChildScrollView(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '1.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '2.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '3.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '4.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '5.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '6.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '7.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '8.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '9.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '10.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '11.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '12.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '13.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '14.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '15.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '16.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Expanded(
-                                  flex: 1,
-                                  child: Multi(
-                                      color:
-                                          const Color.fromARGB(255, 0, 49, 92),
-                                      subtitle: '17.',
-                                      weight: FontWeight.w500,
-                                      size: 18)),
-                              Date(),
-                              Button(),
-                            ],
-                          ),
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '1.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '2.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '3.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '4.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '5.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '6.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '7.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '8.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '9.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '10.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '11.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '12.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '13.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '14.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '15.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '16.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Multi(
+                                        color:
+                                            const Color.fromARGB(255, 0, 49, 92),
+                                        subtitle: '17.',
+                                        weight: FontWeight.w500,
+                                        size: 18)),
+                                Date(),
+                                Button(),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   )
@@ -393,12 +397,12 @@ class HistorySheet extends StatelessWidget {
                               width: 20.h,
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(top: 12),
+                              padding: const EdgeInsets.only(top: 15),
                               child: Multi(
                                   color: const Color.fromARGB(255, 0, 49, 92),
-                                  subtitle: 'Fill Out Inspection Sheet',
+                                  subtitle: 'Sheets History',
                                   weight: FontWeight.w500,
-                                  size: 18),
+                                  size: 15),
                             )
                           ],
                         ),
