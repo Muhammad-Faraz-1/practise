@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sign_up_page_2/multi.dart';
-import 'package:sign_up_page_2/screens/update_sheet.dart';
 import 'package:sign_up_page_2/screens/visit_sheet.dart';
 
 class Date extends StatelessWidget {
@@ -15,7 +14,7 @@ class Date extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Container(
           height: 40.h,
-          width: 140.w,
+          width: 120.w,
           decoration: const BoxDecoration(
             color: Colors.black,
           ),
@@ -23,23 +22,18 @@ class Date extends StatelessWidget {
             padding: const EdgeInsets.all(0.5),
             child: Container(
               height: 39.5.h,
-              width: 139.5.w,
+              width: 119.5.w,
               decoration: const BoxDecoration(
                 color: Colors.white,
               ),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Multi(
-                            color: Color.fromARGB(255, 175, 175, 175),
-                            subtitle: '13/12/2001',
-                            weight: FontWeight.w600,
-                            size: 15)),
-                  ),
-                  Icon(Icons.calendar_month),
-                ],
+              child: Expanded(
+                child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                    child: Multi(
+                        color: Color.fromARGB(255, 175, 175, 175),
+                        subtitle: '13/12/2001',
+                        weight: FontWeight.w600,
+                        size: 15)),
               ),
             ),
           ),
@@ -57,7 +51,7 @@ class Button extends StatelessWidget {
     return Expanded(
       flex: 2,
       child: Container(
-        height: 40.h,
+        height: 30.h,
         child: ElevatedButton(
           onPressed: () {
             Navigator.push(

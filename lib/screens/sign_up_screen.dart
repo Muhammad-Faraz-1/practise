@@ -6,6 +6,7 @@ import 'package:sign_up_page_2/screens/first_page.dart';
 import 'package:sign_up_page_2/screens/login_screen.dart';
 import 'package:sign_up_page_2/statemaneger/Provider.dart';
 import 'package:sign_up_page_2/widgets/popup.dart';
+import 'package:sign_up_page_2/widgets/shadow_text.dart';
 
 class SignUpPage extends StatelessWidget {
   String dropdownvalue = 'QCI';
@@ -52,209 +53,186 @@ class SignUpPage extends StatelessWidget {
                                   height: 40.h,
                                   width: 150.w,
                                   child: Image.asset('assets/logo.png')),
-                              Multi(
-                                  color: Colors.red,
-                                  subtitle: 'Registration',
-                                  weight: FontWeight.w500,
-                                  size: 25)
+                              
+                                  ShadowText(text: 'Registration', size: 25, color: Colors.red, weight: FontWeight.w500, shadowColor: Colors.white)
                             ]),
                       ),
-                      Container(
-                        height: 70.h,
-                        width: 300.w,
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Multi(
-                                  color: Colors.white,
-                                  subtitle: 'User Name',
-                                  weight: FontWeight.w500,
-                                  size: 15),
-                              TextField(
-                                style: TextStyle(color: Colors.white,fontSize: 15),
-                                decoration: InputDecoration(
-                                  enabledBorder: const OutlineInputBorder(
-                                    borderSide: BorderSide(color: Colors.white),
-                                  ),
-                                  focusedBorder: const OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: Colors.white)),
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  
-                                  hintText: 'Amir Hassan',
-                                  hintStyle:
-                                      const TextStyle(color: Colors.white,fontSize: 15),
+                      Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Multi(
+                                color: Colors.white,
+                                subtitle: 'User Name',
+                                weight: FontWeight.w500,
+                                size: 15),
+                            TextField(
+                              style: TextStyle(color: Colors.white,fontSize: 15),
+                              decoration: InputDecoration(
+                                enabledBorder: const OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white),
                                 ),
-                              ),
-                            ]),
-                      ),
-                      Container(
-                        height: 70.h,
-                        width: 300.w,
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text(
-                                'User Role:',
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255),
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              Container(
-                                height: 50.h,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5),
-                                  color: Colors.white,
+                                focusedBorder: const OutlineInputBorder(
+                                    borderSide:
+                                        BorderSide(color: Colors.white)),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
                                 ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(1),
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
-                                      color:
-                                          const Color.fromARGB(255, 4, 17, 65),
-                                    ),
-                                    child: DropdownButtonHideUnderline(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(15),
-                                        child: DropdownButton(
-                                          dropdownColor: const Color.fromARGB(
-                                              255, 4, 17, 65),
-                                          isExpanded: true,
+                                
+                                hintText: 'Amir Hassan',
+                                hintStyle:
+                                    const TextStyle(color: Colors.white,fontSize: 15),
+                              ),
+                            ),
+                          ]),
+                      Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text(
+                              'User Role:',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            Container(
+                              height: 50.h,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                color: Colors.white,
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(1),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    color:
+                                        const Color.fromARGB(255, 4, 17, 65),
+                                  ),
+                                  child: DropdownButtonHideUnderline(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(15),
+                                      child: DropdownButton(
+                                        dropdownColor: const Color.fromARGB(
+                                            255, 4, 17, 65),
+                                        isExpanded: true,
 
-                                          // Initial Value
-                                          value: dropdownvalue,
+                                        // Initial Value
+                                        value: dropdownvalue,
 
-                                          // Down Arrow Icon
-                                          icon: const Icon(
-                                              Icons.keyboard_arrow_down),
+                                        // Down Arrow Icon
+                                        icon: const Icon(
+                                            Icons.keyboard_arrow_down),
 
-                                          // Array list of items
-                                          items: items.map((String items) {
-                                            return DropdownMenuItem(
-                                              value: items,
-                                              child: Text(
-                                                items,
-                                                style: const TextStyle(
-                                                    color: Colors.white),
-                                              ),
-                                            );
-                                          }).toList(),
-                                          // After selecting the desired option,it will
-                                          // change button value to selected value
-                                          onChanged: (String? newValue) {
-                                            Provider11.changeValue(newValue);
-                                          },
-                                        ),
+                                        // Array list of items
+                                        items: items.map((String items) {
+                                          return DropdownMenuItem(
+                                            value: items,
+                                            child: Text(
+                                              items,
+                                              style: const TextStyle(
+                                                  color: Colors.white),
+                                            ),
+                                          );
+                                        }).toList(),
+                                        // After selecting the desired option,it will
+                                        // change button value to selected value
+                                        onChanged: (String? newValue) {
+                                          Provider11.changeValue(newValue);
+                                        },
                                       ),
                                     ),
                                   ),
                                 ),
                               ),
-                            ]),
-                      ),
-                      Container(
-                        height: 70.h,
-                        width: 300.w,
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Multi(
-                                  color: Colors.white,
-                                  subtitle: 'Trade:',
-                                  weight: FontWeight.w500,
-                                  size: 15),
-                              TextField(
-                                style: TextStyle(color: Colors.white,fontSize: 12),
-                                decoration: InputDecoration(
-                                  enabledBorder: const OutlineInputBorder(
-                                    borderSide: BorderSide(color: Colors.white),
-                                  ),
-                                  focusedBorder: const OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: Colors.white)),
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  
-                                  
+                            ),
+                          ]),
+                      Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Multi(
+                                color: Colors.white,
+                                subtitle: 'Trade:',
+                                weight: FontWeight.w500,
+                                size: 15),
+                            TextField(
+                              style: TextStyle(color: Colors.white,fontSize: 15),
+                              decoration: InputDecoration(
+                                enabledBorder: const OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white),
                                 ),
-                              ),
-                            ]),
-                      ),
-                      Container(
-                        height:70.h,
-                        width: 300.w,
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Multi(
-                                  color: Colors.white,
-                                  subtitle: 'Army Number:',
-                                  weight: FontWeight.w500,
-                                  size: 15),
-                              TextField(
-                                style: TextStyle(color: Colors.white,fontSize: 12),
-                                decoration: InputDecoration(
-                                  enabledBorder: const OutlineInputBorder(
-                                    borderSide: BorderSide(color: Colors.white),
-                                  ),
-                                  focusedBorder: const OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: Colors.white)),
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  
-                                  
+                                focusedBorder: const OutlineInputBorder(
+                                    borderSide:
+                                        BorderSide(color: Colors.white)),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
                                 ),
+                                
+                                
                               ),
-                            ]),
-                      ),
-                      Container(
-                        height: 70.h,
-                        width: 300.w,
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Multi(
-                                  color: Colors.white,
-                                  subtitle: 'Set Password',
-                                  weight: FontWeight.w500,
-                                  size: 15),
-                              TextField(
-                                obscureText: true,
-                                style: TextStyle(color: Colors.white,fontSize: 12),
-                                decoration: InputDecoration(
-                                  
-                                  enabledBorder: const OutlineInputBorder(
-                                    borderSide: BorderSide(color: Colors.white),
-                                  ),
-                                  focusedBorder: const OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: Colors.white)),
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  
-                                  hintText: '**********',
-                                  hintStyle:
-                                      const TextStyle(color: Colors.white),
+                            ),
+                          ]),
+                      Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Multi(
+                                color: Colors.white,
+                                subtitle: 'Army Number:',
+                                weight: FontWeight.w500,
+                                size: 15),
+                            TextField(
+                              style: TextStyle(color: Colors.white,fontSize: 15),
+                              decoration: InputDecoration(
+                                enabledBorder: const OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white),
                                 ),
+                                focusedBorder: const OutlineInputBorder(
+                                    borderSide:
+                                        BorderSide(color: Colors.white)),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                
+                                
                               ),
-                            ]),
-                      ),
+                            ),
+                          ]),
+                      Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Multi(
+                                color: Colors.white,
+                                subtitle: 'Set Password',
+                                weight: FontWeight.w500,
+                                size: 15),
+                            TextField(
+                              obscureText: true,
+                              style: TextStyle(color: Colors.white,fontSize: 15),
+                              decoration: InputDecoration(
+                                
+                                enabledBorder: const OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white),
+                                ),
+                                focusedBorder: const OutlineInputBorder(
+                                    borderSide:
+                                        BorderSide(color: Colors.white)),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                
+                                hintText: '**********',
+                                hintStyle:
+                                    const TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ]),
                       Container(
                         height: 230.h,
-                        width: 300.w,
+                        width: 350.w,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [

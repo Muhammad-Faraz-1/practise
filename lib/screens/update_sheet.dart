@@ -45,7 +45,7 @@ class _UpdateSheetState extends State<UpdateSheet> {
                             Align(
                               alignment: Alignment.topLeft,
                               child: Container(
-                                  height: 40.h,
+                                  height: 30.h,
                                   width: 85.w,
                                   child: TextButton(
                                     onPressed: () {
@@ -67,13 +67,13 @@ class _UpdateSheetState extends State<UpdateSheet> {
                                 Multi(
                                   color: const Color.fromARGB(255, 19, 14, 85),
                                   subtitle: '25 HRS INSPECTION CHECK ',
-                                  weight: FontWeight.w500,
+                                  weight: FontWeight.w600,
                                   size: 18,
                                 ),
                                 Multi(
                                   color: const Color.fromARGB(255, 19, 14, 85),
                                   subtitle: 'SHEET OF Mi 171 HEL (KAZAN)',
-                                  weight: FontWeight.w500,
+                                  weight: FontWeight.w600,
                                   size: 18,
                                 ),
                               ],
@@ -337,40 +337,43 @@ class _UpdateSheetState extends State<UpdateSheet> {
                     )
                   ],
                 ),
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: Column(
-                    children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                 Align(
+                      alignment: Alignment.topCenter,
+                      child: Column(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left: 10, top: 10),
-                            child: Container(
-                                height: 40.h,
-                                width: 80.w,
-                                child: Image.asset('assets/logo.png')),
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 10),
+                                  child: Container(
+                                      height: 40.h,
+                                      width: 80.w,
+                                      child: Image.asset('assets/logo.png')),
+                                ),
+                                SizedBox(
+                                  width: 20.h,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 12),
+                                  child: Multi(
+                                      color: const Color.fromARGB(255, 0, 49, 92),
+                                      subtitle: 'Update Inspection Sheet',
+                                      weight: FontWeight.w500,
+                                      size: 15),
+                                )
+                              ],
+                            ),
                           ),
-                          SizedBox(
-                            width: 20.h,
+                          const Divider(
+                            thickness: 0.7,
+                            color: Color.fromARGB(255, 4, 17, 65),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 15),
-                            child: Multi(
-                                color: const Color.fromARGB(255, 0, 49, 92),
-                                subtitle: 'Update Sheet',
-                                weight: FontWeight.w500,
-                                size: 15),
-                          )
                         ],
                       ),
-                      const Divider(
-                        thickness: 0.7,
-                        color: Color.fromARGB(255, 4, 17, 65),
-                      ),
-                    ],
-                  ),
-                ),
+                    ),
               ],
             ),
           )

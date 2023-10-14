@@ -4,6 +4,7 @@ import 'package:sign_up_page_2/multi.dart';
 import 'package:sign_up_page_2/screens/fill_out_inspection.dart';
 import 'package:sign_up_page_2/screens/history_sheet.dart';
 import 'package:sign_up_page_2/screens/user_account.dart';
+import 'package:sign_up_page_2/widgets/shadow_text.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
@@ -39,13 +40,14 @@ class FirstPage extends StatelessWidget {
                                   height: 60.h,
                                   width: 150.w,
                                   child: Image.asset('assets/logo.png')),
-                              const Text(
-                                'Quality Inspection',
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255),
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.w500),
-                              ),
+                                   ShadowText2(text: 'Quality Inspection', size: 25, color: Color.fromARGB(255, 255, 255, 255), weight:FontWeight.w400, shadowColor: Color.fromARGB(255, 255, 255, 255)),
+                              // const Text(
+                              //   'Quality Inspection',
+                              //   style: TextStyle(
+                              //       color: Color.fromARGB(255, 255, 255, 255),
+                              //       fontSize: 25,
+                              //       fontWeight: FontWeight.w500),
+                              // ),
                             ]),
                           )
                         ],
